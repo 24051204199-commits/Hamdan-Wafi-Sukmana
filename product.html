@@ -1,0 +1,174 @@
+<section class="container my-5">
+  <h2 class="text-center fw-bold mb-4">☕ Our Menu</h2>
+
+  <!-- Success Message -->
+  <div id="successMessage" class="order-success text-center mb-4">
+    <h5 class="text-success">✓ Pesanan Berhasil!</h5>
+    <p id="orderDetails"></p>
+  </div>
+
+  <!-- === Coffee Section === -->
+  <h4 class="fw-semibold mb-3 text-secondary">Coffee</h4>
+  <div class="row g-4 mb-5">
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/americano.png" alt="Americano" class="w-100 rounded-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold">Americano</h5>
+          <p class="text-muted small">Espresso dengan air panas, rasa pahit klasik untuk pecinta kopi sejati.</p>
+          <p class="text-muted mb-2">Rp 27.000</p>
+          <button class="btn btn-outline-dark btn-sm" onclick="openOrderForm('Americano', 27000)">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/vanila.png" alt="Vanilla Latte" class="w-100 rounded-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold">Vanilla Latte</h5>
+          <p class="text-muted small">Perpaduan espresso, susu lembut, dan sirup vanila yang manis.</p>
+          <p class="text-muted mb-2">Rp 34.000</p>
+          <button class="btn btn-outline-dark btn-sm" onclick="openOrderForm('Vanilla Latte', 34000)">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/mocha.png" alt="Caffe Mocha" class="w-100 rounded-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold">Caffe Mocha</h5>
+          <p class="text-muted small">Kombinasi sempurna espresso, cokelat, dan susu yang creamy.</p>
+          <p class="text-muted mb-2">Rp 33.000</p>
+          <button class="btn btn-outline-dark btn-sm" onclick="openOrderForm('Caffe Mocha', 33000)">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/caramel.png" alt="Caramel Macchiato" class="w-100 rounded-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold">Caramel Macchiato</h5>
+          <p class="text-muted small">Rasa manis karamel berpadu lembut dengan espresso dan susu panas.</p>
+          <p class="text-muted mb-2">Rp 36.000</p>
+          <button class="btn btn-outline-dark btn-sm" onclick="openOrderForm('Caramel Macchiato', 36000)">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Non-Coffee Section === -->
+  <h4 class="fw-semibold mb-3 text-secondary">Non-Coffee</h4>
+  <div class="row g-4 mb-5">
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/ice.png" alt="Iced Chocolate" class="w-100 rounded-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold">Iced Chocolate</h5>
+          <p class="text-muted small">Minuman cokelat dingin yang creamy dan menyegarkan.</p>
+          <p class="text-muted mb-2">Rp 30.000</p>
+          <button class="btn btn-outline-dark btn-sm" onclick="openOrderForm('Iced Chocolate', 30000)">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/machalate.png" alt="Matcha Latte" class="w-100 rounded-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold">Matcha Latte</h5>
+          <p class="text-muted small">Perpaduan matcha Jepang premium dan susu segar yang lembut.</p>
+          <p class="text-muted mb-2">Rp 32.000</p>
+          <button class="btn btn-outline-dark btn-sm" onclick="openOrderForm('Matcha Latte', 32000)">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/stoberi.png" alt="Strawberry Milk" class="w-100 rounded-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold">Strawberry Milk</h5>
+          <p class="text-muted small">Susu segar berpadu dengan sirup stroberi alami yang manis.</p>
+          <p class="text-muted mb-2">Rp 29.000</p>
+          <button class="btn btn-outline-dark btn-sm" onclick="openOrderForm('Strawberry Milk', 29000)">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/green.png" alt="Green Tea Latte" class="w-100 rounded-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold">Green Tea Latte</h5>
+          <p class="text-muted small">Minuman teh hijau yang menenangkan dengan susu hangat lembut.</p>
+          <p class="text-muted mb-2">Rp 31.000</p>
+          <button class="btn btn-outline-dark btn-sm" onclick="openOrderForm('Green Tea Latte', 31000)">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Dessert Section === -->
+  <h4 class="fw-semibold mb-3 text-secondary">Desserts</h4>
+  <div class="row g-4">
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/ButterCroissant.png" alt="Butter Croissant" class="w-100 rounded-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold">Butter Croissant</h5>
+          <p class="text-muted small">Roti croissant berlapis mentega yang renyah di luar dan lembut di dalam.</p>
+          <p class="text-muted mb-2">Rp 18.000</p>
+          <button class="btn btn-outline-dark btn-sm" onclick="openOrderForm('Butter Croissant', 18000)">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/ChocolateBrownie.png" alt="Chocolate Brownie" class="w-100 rounded-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold">Chocolate Brownie</h5>
+          <p class="text-muted small">Brownie cokelat lembut dengan aroma butter dan rasa manis pas.</p>
+          <p class="text-muted mb-2">Rp 22.000</p>
+          <button class="btn btn-outline-dark btn-sm" onclick="openOrderForm('Chocolate Brownie', 22000)">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/ClassicCheesecake.png" alt="Cheesecake" class="w-100 rounded-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold">Classic Cheesecake</h5>
+          <p class="text-muted small">Tekstur creamy dengan rasa keju lembut yang meleleh di mulut.</p>
+          <p class="text-muted mb-2">Rp 25.000</p>
+          <button class="btn btn-outline-dark btn-sm" onclick="openOrderForm('Classic Cheesecake', 25000)">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/BlueberryMuffin.png" alt="Blueberry Muffin" class="w-100 rounded-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title fw-semibold">Blueberry Muffin</h5>
+          <p class="text-muted small">Muffin lembut berisi potongan blueberry segar dan aroma vanilla.</p>
+          <p class="text-muted mb-2">Rp 20.000</p>
+          <button class="btn btn-outline-dark btn-sm" onclick="openOrderForm('Blueberry Muffin', 20000)">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Promo -->
+  <div class="text-center mt-5 p-4 bg-warning bg-opacity-25 rounded shadow-sm">
+    <h4 class="fw-bold">🎉 Promo Spesial!</h4>
+    <p class="mb-0">
+      Beli 2 minuman Coffee apa saja, Gratis 1 Dessert! <br />
+      Berlaku hingga akhir bulan ini 🍰
+    </p>
+  </div>
+</section>

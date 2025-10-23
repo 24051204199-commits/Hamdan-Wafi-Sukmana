@@ -1,0 +1,234 @@
+<!-- ======== ULASAN & KONTAK ======== -->
+<section class="container my-5">
+
+  <!-- ======== ULASAN PELANGGAN ======== -->
+  <div class="mt-5 pt-5 border-top">
+    <h3 class="text-center fw-bold mb-4 text-brown">💬 Ulasan Pelanggan</h3>
+
+    <div id="reviews" class="row g-4">
+      <!-- 3 ulasan default -->
+      <div class="col-md-4">
+        <div class="card review-card shadow-lg border-0 h-100 text-center p-4">
+          <img
+            src="https://i.pravatar.cc/100?img=1"
+            class="review-img mb-3 rounded-circle border border-3 border-warning"
+            alt="Rina"
+          />
+          <h6 class="fw-semibold mb-1 text-dark">Rina Kusuma</h6>
+          <p class="text-warning mb-2 fs-5">★★★★★</p>
+          <p class="text-muted fst-italic">
+            “Kopinya enak banget! Tempatnya juga nyaman buat nugas atau nongkrong bareng teman.”
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card review-card shadow-lg border-0 h-100 text-center p-4">
+          <img
+            src="https://i.pravatar.cc/100?img=2"
+            class="review-img mb-3 rounded-circle border border-3 border-warning"
+            alt="Dimas"
+          />
+          <h6 class="fw-semibold mb-1 text-dark">Dimas Pratama</h6>
+          <p class="text-warning mb-2 fs-5">★★★★☆</p>
+          <p class="text-muted fst-italic">
+            “Suasana tenang dan baristanya ramah. Matcha Latte-nya wajib dicoba!”
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card review-card shadow-lg border-0 h-100 text-center p-4">
+          <img
+            src="https://i.pravatar.cc/100?img=3"
+            class="review-img mb-3 rounded-circle border border-3 border-warning"
+            alt="Siti"
+          />
+          <h6 class="fw-semibold mb-1 text-dark">Siti Rahma</h6>
+          <p class="text-warning mb-2 fs-5">★★★★★</p>
+          <p class="text-muted fst-italic">
+            “Pelayanan cepat, tempatnya bersih, dan banyak promo menarik tiap bulannya!”
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== FORM ULASAN & KONTAK (2 KOLOM) ======== -->
+  <div class="row mt-5 pt-5 border-top">
+    <!-- Form Tambah Ulasan -->
+    <div class="col-md-6">
+      <h5 class="fw-bold mb-4 text-brown text-center">📝 Tulis Ulasan Anda</h5>
+      <form
+        id="reviewForm"
+        class="review-form mx-auto p-4 shadow-lg rounded bg-light"
+        style="max-width: 500px"
+      >
+        <div class="mb-3">
+          <input
+            type="text"
+            id="name"
+            class="form-control form-control-lg"
+            placeholder="Nama Anda"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <textarea
+            id="review"
+            class="form-control form-control-lg"
+            rows="4"
+            placeholder="Tulis ulasan Anda di sini..."
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-brown btn-lg w-100">
+          Kirim Ulasan
+        </button>
+      </form>
+      <p id="reviewMessage" class="text-success mt-3 text-center" style="display: none">
+        Terima kasih atas ulasan Anda! ☕
+      </p>
+    </div>
+
+    <!-- Form Kontak Kami -->
+    <div class="col-md-6">
+      <h5 class="fw-bold mb-4 text-brown text-center">📞 Kontak Kami</h5>
+      <form
+        id="contactForm"
+        class="shadow-lg p-4 rounded bg-light contact-form mx-auto"
+        style="max-width: 500px"
+      >
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Nama Lengkap</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Masukkan nama anda"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Masukkan email anda"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Pesan</label>
+          <textarea
+            class="form-control"
+            rows="4"
+            placeholder="Tuliskan pesan anda..."
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-brown w-100">
+          Kirim Pesan
+        </button>
+      </form>
+      <p id="contactMessage" class="text-success text-center mt-3" style="display: none">
+        Terima kasih! Pesan Anda telah dikirim. 🙌
+      </p>
+
+      <!-- Media Sosial -->
+      <div class="text-center mt-5 pt-4 border-top">
+        <h5 class="fw-bold mb-3 text-brown">Ikuti Kami di Media Sosial</h5>
+        <div class="social-icons d-flex justify-content-center gap-4">
+          <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="social-link"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== SCRIPT ======== -->
+<script>
+  // Tambah Ulasan Dinamis
+  document.getElementById("reviewForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const review = document.getElementById("review").value;
+
+    const newReview = `
+      <div class="col-md-4">
+        <div class="card review-card shadow-lg border-0 h-100 text-center p-4">
+          <img src="https://i.pravatar.cc/100?u=${name}" class="review-img mb-3 rounded-circle border border-3 border-warning" alt="${name}" />
+          <h6 class="fw-semibold mb-1 text-dark">${name}</h6>
+          <p class="text-warning mb-2 fs-5">★★★★★</p>
+          <p class="text-muted fst-italic">“${review}”</p>
+        </div>
+      </div>
+    `;
+    document.getElementById("reviews").innerHTML += newReview;
+
+    document.getElementById("reviewForm").reset();
+    const message = document.getElementById("reviewMessage");
+    message.style.display = "block";
+    setTimeout(() => (message.style.display = "none"), 3000);
+  });
+
+  // Kirim pesan kontak
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    document.getElementById("contactForm").reset();
+    const msg = document.getElementById("contactMessage");
+    msg.style.display = "block";
+    setTimeout(() => (msg.style.display = "none"), 3000);
+  });
+</script>
+
+<!-- ======== STYLE TAMBAHAN ======== -->
+<style>
+  .text-brown {
+    color: #5a3825;
+  }
+
+  .btn-brown {
+    background-color: #6f4e37;
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+  }
+
+  .btn-brown:hover {
+    background-color: #593825;
+    color: #fff;
+  }
+
+  .review-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .social-link {
+    color: #5a3825;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+  }
+
+  .social-link:hover {
+    color: #d4a373;
+    transform: scale(1.2);
+  }
+
+  .contact-form {
+    border: 2px solid #f5deb3;
+  }
+
+  @media (max-width: 768px) {
+    .col-md-6 {
+      margin-bottom: 2rem;
+    }
+  }
+</style>
